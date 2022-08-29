@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400;500&display=swap');
+
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --primary-blue: hsl(213, 19%, 18%);
+  --secondary-blue: hsl(216, 12%, 8%);
+  --bg-inside: hsl(213, 19%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Overpass', sans-serif;
+}
+
+body {
+  background-color: var(--secondary-blue);
+  font-size: 15px;
+}
+
+h3 {
+  color: var(--white);
+  margin: 1.7rem 0 0.5rem 0;
+  word-spacing: 2px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+p {
+  word-wrap: break-word;
+  width: 20rem;
+  text-overflow: ellipsis;
+  line-height: 1.6;
+  color: var(--light-grey);
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+
+main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--primary-blue);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-inside);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon img {
+  color: var(--primary-orange);
+}
+
+.scores {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.scores > h4 {
+  background-color: var(--bg-inside);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: var(--light-grey);
+  cursor: pointer;
+}
+
+.submit {
+  margin-top: 10px;
+  padding: 10px 7rem;
+  background-color: var(--primary-orange);
+  color: var(--white);
+  border: none;
+  border-radius: 30px;
+}
