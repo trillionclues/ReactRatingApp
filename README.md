@@ -1,4 +1,4 @@
-# ⭐FrontendMentor - Interactive Rating Component(ReactJS)
+# ⭐Interactive Rating Component(ReactJS)
 
 ![Display solution](./src/images/solution.png)
 Thanks for checking out this front-end coding challenge.
