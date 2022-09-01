@@ -5,9 +5,9 @@ Thanks for checking out this front-end coding challenge.
 Frontend Mentor challenges help you improve your coding skills by building realistic projects and today I worked on a rating app.
 
 <div align='center'>
-![Homepage](./src/images/challenge1)
-![Active page](./src/images/challenge2)
-![Result page](./src/images/challenge3)
+![Homepage](./src/images/challenge1.png)
+![Active page](./src/images/challenge2.png)
+![Result page](./src/images/challenge3.png)
 </div>
 
 ## Description
