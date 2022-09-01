@@ -9,6 +9,7 @@ Frontend Mentor challenges help you improve your coding skills by building reali
 <![Active page](../src/images/challenge2)
 <![Result page](../src/images/challenge3)
 </div>
+
 ## Description
 
 This challenege was to build a numbered interactive rating component and get it looking as close to the design as possible.
