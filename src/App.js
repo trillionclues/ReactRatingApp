@@ -1,22 +1,26 @@
 import React, { useState } from 'react'
-import Rating from './components/Rating'
-import Submit from './components/Submit'
+import { Attribution } from './components/Attribution'
+import { Rating } from './components/Rating'
+import { Submit } from './components/Submit'
 import './style.css'
+// import log from '../src/images/'
 
 function App() {
-  const [thankYou, setThankYou] = useState(false)
-  const [showRating, setShowRating] = useState(null)
+  const [showThankYou, setShowThankYou] = useState(false)
+  const [rating, setRating] = useState(null)
+
   return (
     <div className='container'>
-      {thankYou ? (
-        <Submit showRating={showRating} />
+      {showThankYou ? (
+        <Submit rating={rating} />
       ) : (
         <Rating
-          showRating={showRating}
-          setShowRating={setShowRating}
-          setThankYou={setThankYou}
+          rating={rating}
+          setRating={setRating}
+          setShowThankYou={setShowThankYou}
         />
       )}
+      <Attribution />
     </div>
   )
 }

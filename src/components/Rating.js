@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
 import { Content } from './Content'
-import logo from '../images/icon-star.svg'
+import starLogo from '../images/icon-star.svg'
+import altschoolLogo from '../images/download.svg'
 
-const Rating = (showRating, setShowRating, setThankYou) => {
-  const [rating, setRating] = useState({
+export const Rating = ({ rating, setRating, setShowThankYou }) => {
+  const [activeRating, setActiveRating] = useState({
     oneStar: false,
     twoStars: false,
     threeStars: false,
@@ -12,33 +13,35 @@ const Rating = (showRating, setShowRating, setThankYou) => {
   })
 
   const handleSubmit = () => {
-    if (!showRating) {
-      return
-    }
-    setThankYou(true)
+    if (!rating) return
+
+    setShowThankYou(true)
   }
 
   return (
     <main>
       <div className='icon'>
-        <img src={logo} alt='icon star' />
+        <div className='staricon'>
+          <img src={starLogo} alt='icon star' />
+        </div>
+        <img className='altschool' src={altschoolLogo} alt='icon star' />
       </div>
       <Content />
-      <form className='scores'>
+      <form className='scores' onSubmit={handleSubmit}>
         <button
           type='button'
           value={1}
           name='rate'
-          className={rating.oneStar ? 'button active' : 'button'}
+          className={activeRating.oneStar ? 'button active' : 'button'}
           onClick={() => {
-            setRating({
+            setActiveRating({
               oneStar: true,
               twoStars: false,
               threeStars: false,
               fourStars: false,
               fiveStars: false,
             })
-            setShowRating(1)
+            setRating(1)
           }}
         >
           1
@@ -47,16 +50,16 @@ const Rating = (showRating, setShowRating, setThankYou) => {
           type='button'
           value={2}
           name='rate'
-          className={rating.twoStars ? 'button active' : 'button'}
+          className={activeRating.twoStars ? 'button active' : 'button'}
           onClick={() => {
-            setRating({
+            setActiveRating({
               oneStar: false,
               twoStars: true,
               threeStars: false,
               fourStars: false,
               fiveStars: false,
             })
-            setShowRating(2)
+            setRating(2)
           }}
         >
           2
@@ -65,16 +68,16 @@ const Rating = (showRating, setShowRating, setThankYou) => {
           type='button'
           value={3}
           name='rate'
-          className={rating.threeStars ? 'button active' : 'button'}
+          className={activeRating.threeStars ? 'button active' : 'button'}
           onClick={() => {
-            setRating({
+            setActiveRating({
               oneStar: false,
               twoStars: false,
               threeStars: true,
               fourStars: false,
               fiveStars: false,
             })
-            setShowRating(3)
+            setRating(3)
           }}
         >
           3
@@ -83,16 +86,16 @@ const Rating = (showRating, setShowRating, setThankYou) => {
           type='button'
           value={4}
           name='rate'
-          className={rating.fourStars ? 'button active' : 'button'}
+          className={activeRating.fourStars ? 'button active' : 'button'}
           onClick={() => {
-            setRating({
+            setActiveRating({
               oneStar: false,
               twoStars: false,
               threeStars: false,
               fourStars: true,
               fiveStars: false,
             })
-            setShowRating(4)
+            setRating(4)
           }}
         >
           4
@@ -101,26 +104,24 @@ const Rating = (showRating, setShowRating, setThankYou) => {
           type='button'
           value={5}
           name='rate'
-          className={rating.fiveStars ? 'button active' : 'button'}
+          className={activeRating.fiveStars ? 'button active' : 'button'}
           onClick={() => {
-            setRating({
+            setActiveRating({
               oneStar: false,
               twoStars: false,
               threeStars: false,
               fourStars: false,
               fiveStars: true,
             })
-            setShowRating(5)
+            setRating(5)
           }}
         >
           5
         </button>
       </form>
-      <button id='submit' onClick={handleSubmit}>
+      <button id='submit' type='submit' onClick={handleSubmit}>
         Submit
       </button>
     </main>
   )
 }
-
-export default Rating

@@ -50,11 +50,17 @@ main {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--primary-blue);
-  padding: 20px;
+  padding: 30px 23px;
   border-radius: 15px;
 }
 
 .icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.staricon {
   width: 40px;
   height: 40px;
   background-color: var(--bg-inside);
@@ -64,8 +70,15 @@ main {
   align-items: center;
 }
 
-.icon img {
+.staricon img {
   color: var(--primary-orange);
+  width: 27px;
+  height: 27px;
+}
+
+.altschool {
+  width: 45px;
+  height: 45px;
 }
 
 /* BUTTON COMPONENT */
@@ -78,8 +91,8 @@ main {
 
 .scores > button {
   background-color: var(--bg-inside);
-  width: 43px;
-  height: 43px;
+  width: 45px;
+  height: 45px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,7 +117,7 @@ button.active {
 
 #submit {
   margin-top: 8px;
-  padding: 12px 7rem;
+  padding: 14px 7.5rem;
   background-color: var(--primary-orange);
   color: var(--white);
   border: none;
@@ -113,7 +126,7 @@ button.active {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: 700;
-  margin-left: 1.2rem;
+  margin-left: 0.8rem;
 }
 
 #submit:hover {
@@ -128,9 +141,6 @@ button.active {
   position: relative;
   height: 100vh;
   width: 100%;
-  /* transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  transform: scale(0);
-  opacity: 0; */
 }
 
 .success {
@@ -145,6 +155,47 @@ button.active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  animation: fadein 2s;
+  -moz-animation: fadein 2s; /* Firefox */
+  -webkit-animation: fadein 2s; /* Safari and Chrome */
+  -o-animation: fadein 2s; /* Opera */
+}
+
+/* ANIMATION */
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .success img {
@@ -175,8 +226,42 @@ button.active {
   text-align: center;
 }
 
-@media screen and(max-width:450px) {
+/* ATTRIBUTION */
+footer {
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--bg-inside);
+  color: var(--white);
+  /* padding: 3px 20px; */
+  width: 35%;
+  text-align: center;
+  border-radius: 10px;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+
+a {
+  text-decoration: none;
+  color: var(--light-grey);
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
   main {
     max-width: 375px;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 640px) {
+  footer {
+    top: 86.5%;
+    width: 71.9%;
+    padding: 2px 30px;
+  }
+
+  .rate-again {
+    margin: 0 1.3rem;
+    width: 100%;
   }
 }
