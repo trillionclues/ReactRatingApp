@@ -4,9 +4,15 @@ Thanks for checking out this front-end coding challenge.
 
 Frontend Mentor challenges help you improve your coding skills by building realistic projects and today I worked on a rating app.
 
+<div align='center'>
+![Homepage](../src/images/challenge1)
+![Active page](../src/images/challenge2)
+![Result page](../src/images/challenge3)
+</div>
+
 ## Description
 
-This challenege was to build a numbered interactive rating component and get it looking as close to the design as possible.
+This challenge was to build a numbered interactive rating component and get it looking as close to the design as possible.
 
 You can use any tools you like to help you complete the challenge...
 
