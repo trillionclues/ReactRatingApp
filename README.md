@@ -1,4 +1,4 @@
-# ⭐ FrontendMentor - interactive Rating Component (ReactJS)
+# ⭐FrontendMentor - Interactive Rating Component(ReactJS)
 
 ![Display solution](./src/images/solution.png)
 Thanks for checking out this front-end coding challenge.
@@ -43,7 +43,7 @@ Tis is my first take on building a react application having been going throuhg t
 
 ## Live demo
 
-Here's a link to view the [live page]()
+Here's a link to view the [LIVE PAGE]()
 
 ### Getting Started with Create React App
 
