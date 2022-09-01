@@ -43,7 +43,7 @@ Tis is my first take on building a react application having been going throuhg t
 
 ## Live demo
 
-Here's a link to view the [LIVE PAGE]()
+Here's a link to view the [LIVE PAGE](https://interactive-react-rating-app.netlify.app/)
 
 ### Getting Started with Create React App
 
